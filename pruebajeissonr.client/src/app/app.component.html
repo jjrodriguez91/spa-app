@@ -1,0 +1,49 @@
+﻿<h1 id="tableLabel">Employees</h1>
+
+<!-- <p>This component demonstrates fetching data from the server.</p> -->
+
+<p *ngIf="!employees"><em>Loading... </em></p>
+
+<app-search-input (searchQuery)="handleSearch($event)"></app-search-input>
+<div class="container-table">
+  <div class="table-wrapper">
+    <table *ngIf="employees" class="table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Edad</th>
+          <th>Salario</th>
+          <th>Salario anual</th>
+        </tr>
+      </thead>
+
+      <!-- Spinner de carga -->
+      <div class="centered-container">
+        <div
+          *ngIf="this.employees.length <= 0 && !isLoadingData"
+        >
+          No hay resultados...
+        </div>
+        <div *ngIf="isLoadingData">
+          <mat-progress-spinner
+            diameter="50"
+            class="spinner-margin"
+            mode="indeterminate"
+          />
+          Cargando...
+        </div>
+      </div>
+
+      <tbody *ngIf="!(isLoadingData)">
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.name }}</td>
+          <td>{{ employee.age }}</td>
+          <td>{{ employee.salary }}</td>
+          <td>{{ employee.annualSalary }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

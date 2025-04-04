@@ -1,0 +1,64 @@
+﻿:host {
+    max-width: 1280px;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+.container-table {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.table-wrapper {
+    flex: 1;
+    overflow: auto;
+    display: block;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: medium;
+}
+
+.table thead {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+    display: block;
+    width: 100%;
+}
+
+.table tbody {
+    display: block;
+    flex: 1;
+    overflow-y: auto;
+    max-height: 100%;
+}
+
+.table thead tr,
+.table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table th,
+.table td {
+    border: 1px solid #e1e1e1;
+    padding: 10px;
+    text-align: center;
+}
+
+.table thead th {
+    background: #EAEAEA;
+}
+
+
+th:nth-child(2),
+td:nth-child(2) {
+    width: 35%;
+}

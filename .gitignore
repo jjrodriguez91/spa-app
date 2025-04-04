@@ -1,0 +1,70 @@
+# ────── Angular ──────
+node_modules/
+dist/
+.angular/
+.env
+.env.*.local
+
+# Compilación
+*.tsbuildinfo
+
+# ────── ASP.NET Core ──────
+bin/
+obj/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos de publicación
+*.Publish.xml
+*.dbmdl
+
+# Configuración local
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# Certificados de desarrollo
+*.pfx
+*.cert
+
+# ────── Docker ──────
+**/Dockerfile.*
+**/docker-compose*.yml
+docker-compose.override.yml
+docker-compose.override.*.yml
+.dockerignore
+docker-volume/
+.docker/
+
+# Evitar archivos creados por contenedores
+**/tmp/
+**/logs/
+*.pid
+
+# ────── Sistema operativo ──────
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ────── IDEs y editores comunes ──────
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln.docstates
+*.vs/
+# ────── Logs ──────
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ────── Otros ──────
+*.bak
+*.swp
+*.tmp

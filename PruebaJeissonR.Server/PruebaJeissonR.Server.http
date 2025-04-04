@@ -1,0 +1,6 @@
+@PruebaJeissonR.Server_HostAddress = http://localhost:5078
+
+GET {{PruebaJeissonR.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

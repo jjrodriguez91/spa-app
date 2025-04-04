@@ -1,0 +1,9 @@
+<mat-form-field appearance="outline">
+    <mat-label>{{placeholder}}</mat-label>
+    <input matInput type="number" [formControl]="searchControl" autocomplete="off" placeholder="Escribe el id para buscar">
+    <button *ngIf="searchControl.value != ''" matSuffix mat-icon-button aria-label="Clear"
+        (click)="searchControl.setValue('')">
+        <mat-icon>close</mat-icon>
+    </button>
+    <mat-icon *ngIf="searchControl.value == ''" matSuffix>search</mat-icon>
+</mat-form-field>

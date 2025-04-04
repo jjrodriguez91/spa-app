@@ -1,0 +1,7 @@
+<ngb-pagination class="pagination-lg custom-pagination" [collectionSize]="totalRecords" [rotate]="true"
+  [(page)]="currentPage" (pageChange)="onPageChange($event)" [maxSize]="5" [pageSize]="pageSize">
+  <ng-template ngbPaginationPrevious><strong>&lt;</strong></ng-template>
+  <ng-template ngbPaginationNext> <strong>&gt;</strong></ng-template>
+  <ng-template ngbPaginationEllipsis><strong>...</strong></ng-template>
+  <ng-template ngbPaginationNumber let-page>{{ page }}</ng-template>
+</ngb-pagination>
